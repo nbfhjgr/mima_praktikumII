@@ -1,0 +1,7 @@
+00:23:51 **** Incremental Build of configuration Default for project permutation ****
+make all 
+gcc -O0 -g -Wall   -c -o attacke.o attacke.c
+gcc -o attacke attacke.o libperm.a 
+
+00:23:51 Build Finished (took 176ms)
+
