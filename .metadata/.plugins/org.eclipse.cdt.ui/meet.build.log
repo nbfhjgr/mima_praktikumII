@@ -1,0 +1,7 @@
+11:41:35 **** Incremental Build of configuration Default for project meet ****
+make all 
+gcc -g  -I../include -Wall -Wstrict-prototypes -Wpointer-arith -Wcast-qual -Wwrite-strings -Waggregate-return -Wstrict-prototypes -Wnested-externs -Winline  -DPRAKTIKUM -DSVR4  -m32   -c -o attack.o attack.c
+gcc -o attack attack.o libssc.a
+
+11:41:35 Build Finished (took 237ms)
+

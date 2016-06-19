@@ -1,0 +1,640 @@
+21:15:17 **** Incremental Build of configuration Default for project timing ****
+make all 
+gcc -g  -I../include -Wall -Wstrict-prototypes -Wpointer-arith -Wcast-qual -Wwrite-strings -Waggregate-return -Wstrict-prototypes -Wnested-externs -Winline  -DPRAKTIKUM -DSVR4  -m32   -c -o attack.o attack.c
+attack.c: In function ‘main’:
+attack.c:38:3: warning: implicit declaration of function ‘attack’ [-Wimplicit-function-declaration]
+   attack(&n);
+   ^
+attack.c:38:3: warning: nested extern declaration of ‘attack’ [-Wnested-externs]
+attack.c: At top level:
+attack.c:51:13: error: conflicting types for ‘attack’
+<builtin>: recipe for target 'attack.o' failed
+ longnum_ptr attack(longnum_ptr n)
+             ^
+attack.c:38:3: note: previous implicit declaration of ‘attack’ was here
+   attack(&n);
+   ^
+attack.c: In function ‘attack’:
+attack.c:58:9: warning: unknown conversion type character 0xa in format [-Wformat=]
+  printf("%l\n",total_timing);
+         ^
+attack.c:58:9: warning: too many arguments for format [-Wformat-extra-args]
+attack.c:57:16: warning: unused variable ‘timing_base_eins’ [-Wunused-variable]
+  unsigned long timing_base_eins=exp_daemon(&temp,&eins);
+                ^
+attack.c:53:12: warning: unused variable ‘y’ [-Wunused-variable]
+  longnum x,y,z;
+            ^
+attack.c:59:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+make: *** [attack.o] Error 1
+21:15:48 **** Incremental Build of configuration Default for project timing ****
+make all 
+gcc -g  -I../include -Wall -Wstrict-prototypes -Wpointer-arith -Wcast-qual -Wwrite-strings -Waggregate-return -Wstrict-prototypes -Wnested-externs -Winline  -DPRAKTIKUM -DSVR4  -m32   -c -o attack.o attack.c
+attack.c: In function ‘main’:
+attack.c:36:2: warning: implicit declaration of function ‘attack’ [-Wimplicit-function-declaration]
+  attack(&n);
+  ^
+attack.c:36:2: warning: nested extern declaration of ‘attack’ [-Wnested-externs]
+attack.c: At top level:
+attack.c:48:13: error: conflicting types for ‘attack’
+ longnum_ptr attack(longnum_ptr n) {
+             ^
+attack.c:36:2: note: previous implicit declaration of ‘attack’ was here
+  attack(&n);
+  ^
+attack.c: In function ‘attack’:
+attack.c:54:9: warning: unknown conversion type character 0xa in format [-Wformat=]
+  printf("%l\n", total_timing);
+         ^
+attack.c:54:9: warning: too many arguments for format [-Wformat-extra-args]
+attack.c:53:16: warning: unused variable ‘timing_base_eins’ [-Wunused-variable]
+<builtin>: recipe for target 'attack.o' failed
+  unsigned long timing_base_eins = exp_daemon(&temp, &eins);
+                ^
+attack.c:49:13: warning: unused variable ‘y’ [-Wunused-variable]
+  longnum x, y, z;
+             ^
+make: *** [attack.o] Error 1
+21:16:27 **** Incremental Build of configuration Default for project timing ****
+make all 
+gcc -g  -I../include -Wall -Wstrict-prototypes -Wpointer-arith -Wcast-qual -Wwrite-strings -Waggregate-return -Wstrict-prototypes -Wnested-externs -Winline  -DPRAKTIKUM -DSVR4  -m32   -c -o attack.o attack.c
+attack.c: In function ‘main’:
+attack.c:36:2: warning: implicit declaration of function ‘timingAttack’ [-Wimplicit-function-declaration]
+  timingAttack(&n);
+  ^
+attack.c:36:2: warning: nested extern declaration of ‘timingAttack’ [-Wnested-externs]
+attack.c: At top level:
+attack.c:48:13: error: conflicting types for ‘timingAttack’
+ longnum_ptr timingAttack(longnum_ptr n) {
+             ^
+attack.c:36:2: note: previous implicit declaration of ‘timingAttack’ was here
+  timingAttack(&n);
+  ^
+attack.c: In function ‘timingAttack’:
+attack.c:54:9: warning: unknown conversion type character 0xa in format [-Wformat=]
+  printf("%l\n", total_timing);
+<builtin>: recipe for target 'attack.o' failed
+         ^
+attack.c:54:9: warning: too many arguments for format [-Wformat-extra-args]
+attack.c:53:16: warning: unused variable ‘timing_base_eins’ [-Wunused-variable]
+  unsigned long timing_base_eins = exp_daemon(&temp, &eins);
+                ^
+attack.c:49:13: warning: unused variable ‘y’ [-Wunused-variable]
+  longnum x, y, z;
+             ^
+make: *** [attack.o] Error 1
+21:17:05 **** Incremental Build of configuration Default for project timing ****
+make all 
+gcc -g  -I../include -Wall -Wstrict-prototypes -Wpointer-arith -Wcast-qual -Wwrite-strings -Waggregate-return -Wstrict-prototypes -Wnested-externs -Winline  -DPRAKTIKUM -DSVR4  -m32   -c -o attack.o attack.c
+attack.c: In function ‘timingAttack’:
+attack.c:56:9: warning: unknown conversion type character 0xa in format [-Wformat=]
+  printf("%l\n", total_timing);
+         ^
+attack.c:56:9: warning: too many arguments for format [-Wformat-extra-args]
+attack.c:55:16: warning: unused variable ‘timing_base_eins’ [-Wunused-variable]
+  unsigned long timing_base_eins = exp_daemon(&temp, &eins);
+                ^
+attack.c:51:13: warning: unused variable ‘y’ [-Wunused-variable]
+  longnum x, y, z;
+             ^
+gcc -g  -I../include -Wall -Wstrict-prototypes -Wpointer-arith -Wcast-qual -Wwrite-strings -Waggregate-return -Wstrict-prototypes -Wnested-externs -Winline  -DPRAKTIKUM -DSVR4  -m32   -c -o daem_acc.o daem_acc.c
+daem_acc.c: In function ‘MakeNetName2’:
+daem_acc.c:26:24: warning: implicit declaration of function ‘getpwuid’ [-Wimplicit-function-declaration]
+  struct passwd *pass = getpwuid(getuid());
+                        ^
+daem_acc.c:26:9: warning: nested extern declaration of ‘getpwuid’ [-Wnested-externs]
+  struct passwd *pass = getpwuid(getuid());
+         ^
+daem_acc.c:26:33: warning: implicit declaration of function ‘getuid’ [-Wimplicit-function-declaration]
+  struct passwd *pass = getpwuid(getuid());
+                                 ^
+daem_acc.c:26:9: warning: nested extern declaration of ‘getuid’ [-Wnested-externs]
+  struct passwd *pass = getpwuid(getuid());
+         ^
+daem_acc.c:26:24: warning: initialization makes pointer from integer without a cast [-Wint-conversion]
+  struct passwd *pass = getpwuid(getuid());
+                        ^
+daem_acc.c:27:29: error: dereferencing pointer to incomplete type ‘struct passwd’
+  const char *username = pass->pw_name;
+                             ^
+make: *** [daem_acc.o] Error 1
+<builtin>: recipe for target 'daem_acc.o' failed
+21:17:34 **** Incremental Build of configuration Default for project timing ****
+make all 
+gcc -g  -I../include -Wall -Wstrict-prototypes -Wpointer-arith -Wcast-qual -Wwrite-strings -Waggregate-return -Wstrict-prototypes -Wnested-externs -Winline  -DPRAKTIKUM -DSVR4  -m32   -c -o daem_acc.o daem_acc.c
+daem_acc.c: In function ‘MakeNetName2’:
+daem_acc.c:27:33: warning: implicit declaration of function ‘getuid’ [-Wimplicit-function-declaration]
+  struct passwd *pass = getpwuid(getuid());
+                                 ^
+daem_acc.c:27:9: warning: nested extern declaration of ‘getuid’ [-Wnested-externs]
+  struct passwd *pass = getpwuid(getuid());
+         ^
+gcc -o attack attack.o daem_acc.o texp.o -L../lib -lpraktikum  -m32 
+21:18:00 **** Incremental Build of configuration Default for project timing ****
+make all 
+make: Nothing to be done for 'all'.
+21:18:50 **** Incremental Build of configuration Default for project timing ****
+make all 
+make: Nothing to be done for 'all'.
+21:20:50 **** Incremental Build of configuration Default for project timing ****
+make all 
+gcc -g  -I../include -Wall -Wstrict-prototypes -Wpointer-arith -Wcast-qual -Wwrite-strings -Waggregate-return -Wstrict-prototypes -Wnested-externs -Winline  -DPRAKTIKUM -DSVR4  -m32   -c -o attack.o attack.c
+attack.c: In function ‘timingAttack’:
+attack.c:60:9: warning: unknown conversion type character 0xa in format [-Wformat=]
+  printf("%l\n", total_timing);
+         ^
+attack.c:60:9: warning: too many arguments for format [-Wformat-extra-args]
+attack.c:59:16: warning: unused variable ‘timing_base_eins’ [-Wunused-variable]
+  unsigned long timing_base_eins = exp_daemon(&temp, &eins);
+                ^
+gcc -o attack attack.o daem_acc.o texp.o -L../lib -lpraktikum  -m32 
+21:26:21 **** Incremental Build of configuration Default for project timing ****
+make all 
+gcc -g  -I../include -Wall -Wstrict-prototypes -Wpointer-arith -Wcast-qual -Wwrite-strings -Waggregate-return -Wstrict-prototypes -Wnested-externs -Winline  -DPRAKTIKUM -DSVR4  -m32   -c -o attack.o attack.c
+attack.c: In function ‘timingAttack’:
+attack.c:55:16: warning: unused variable ‘total_timing’ [-Wunused-variable]
+  unsigned long total_timing = exp_daemon(&z, &x);
+                ^
+gcc -o attack attack.o daem_acc.o texp.o -L../lib -lpraktikum  -m32 
+21:26:31 **** Incremental Build of configuration Default for project timing ****
+make all 
+make: Nothing to be done for 'all'.
+21:40:43 **** Incremental Build of configuration Default for project timing ****
+make all 
+gcc -g  -I../include -Wall -Wstrict-prototypes -Wpointer-arith -Wcast-qual -Wwrite-strings -Waggregate-return -Wstrict-prototypes -Wnested-externs -Winline  -DPRAKTIKUM -DSVR4  -m32   -c -o attack.o attack.c
+attack.c: In function ‘timingAttack’:
+attack.c:55:16: warning: unused variable ‘total_timing’ [-Wunused-variable]
+  unsigned long total_timing = exp_daemon(&z, &x);
+                ^
+gcc -o attack attack.o daem_acc.o texp.o -L../lib -lpraktikum  -m32 
+21:56:03 **** Incremental Build of configuration Default for project timing ****
+make all 
+gcc -g  -I../include -Wall -Wstrict-prototypes -Wpointer-arith -Wcast-qual -Wwrite-strings -Waggregate-return -Wstrict-prototypes -Wnested-externs -Winline  -DPRAKTIKUM -DSVR4  -m32   -c -o attack.o attack.c
+gcc -o attack attack.o daem_acc.o texp.o -L../lib -lpraktikum  -m32 
+21:57:54 **** Incremental Build of configuration Default for project timing ****
+make all 
+gcc -g  -I../include -Wall -Wstrict-prototypes -Wpointer-arith -Wcast-qual -Wwrite-strings -Waggregate-return -Wstrict-prototypes -Wnested-externs -Winline  -DPRAKTIKUM -DSVR4  -m32   -c -o attack.o attack.c
+gcc -o attack attack.o daem_acc.o texp.o -L../lib -lpraktikum  -m32 
+22:16:16 **** Incremental Build of configuration Default for project timing ****
+make all 
+gcc -g  -I../include -Wall -Wstrict-prototypes -Wpointer-arith -Wcast-qual -Wwrite-strings -Waggregate-return -Wstrict-prototypes -Wnested-externs -Winline  -DPRAKTIKUM -DSVR4  -m32   -c -o attack.o attack.c
+attack.c: In function ‘timingAttack’:
+attack.c:73:2: warning: implicit declaration of function ‘LInit2Long’ [-Wimplicit-function-declaration]
+  LInit2Long(1, &cal_z);
+  ^
+attack.c:73:2: warning: nested extern declaration of ‘LInit2Long’ [-Wnested-externs]
+gcc -o attack attack.o daem_acc.o texp.o -L../lib -lpraktikum  -m32 
+attack.o: In function `timingAttack':
+/home/mima/prakII/timing//attack.c:73: undefined reference to `LInit2Long'
+collect2: error: ld returned 1 exit status
+Makefile:13: recipe for target 'attack' failed
+make: *** [attack] Error 1
+22:16:34 **** Incremental Build of configuration Default for project timing ****
+make all 
+gcc -g  -I../include -Wall -Wstrict-prototypes -Wpointer-arith -Wcast-qual -Wwrite-strings -Waggregate-return -Wstrict-prototypes -Wnested-externs -Winline  -DPRAKTIKUM -DSVR4  -m32   -c -o attack.o attack.c
+gcc -o attack attack.o daem_acc.o texp.o -L../lib -lpraktikum  -m32 
+22:18:00 **** Incremental Build of configuration Default for project timing ****
+make all 
+gcc -g  -I../include -Wall -Wstrict-prototypes -Wpointer-arith -Wcast-qual -Wwrite-strings -Waggregate-return -Wstrict-prototypes -Wnested-externs -Winline  -DPRAKTIKUM -DSVR4  -m32   -c -o attack.o attack.c
+attack.c: In function ‘timingAttack’:
+attack.c:90:11: error: incompatible type for argument 1 of ‘LSetBit’
+   LSetBit(y, EXPBITS - i - 1, cur_bit);
+           ^
+In file included from attack.c:14:0:
+../include/longint.h:218:6: note: expected ‘longnum_ptr {aka struct _longnum_ *}’ but argument is of type ‘longnum {aka struct _longnum_}’
+ void LSetBit           ( longnum_ptr x, int pos, int value );
+      ^
+attack.c:93:9: warning: function returns address of local variable [-Wreturn-local-addr]
+  return &y;
+         ^
+<builtin>: recipe for target 'attack.o' failed
+make: *** [attack.o] Error 1
+22:18:15 **** Incremental Build of configuration Default for project timing ****
+make all 
+gcc -g  -I../include -Wall -Wstrict-prototypes -Wpointer-arith -Wcast-qual -Wwrite-strings -Waggregate-return -Wstrict-prototypes -Wnested-externs -Winline  -DPRAKTIKUM -DSVR4  -m32   -c -o attack.o attack.c
+attack.c: In function ‘timingAttack’:
+attack.c:93:9: warning: function returns address of local variable [-Wreturn-local-addr]
+  return &y;
+         ^
+gcc -o attack attack.o daem_acc.o texp.o -L../lib -lpraktikum  -m32 
+22:19:03 **** Incremental Build of configuration Default for project timing ****
+make all 
+gcc -g  -I../include -Wall -Wstrict-prototypes -Wpointer-arith -Wcast-qual -Wwrite-strings -Waggregate-return -Wstrict-prototypes -Wnested-externs -Winline  -DPRAKTIKUM -DSVR4  -m32   -c -o attack.o attack.c
+attack.c: In function ‘timingAttack’:
+attack.c:93:9: warning: function returns address of local variable [-Wreturn-local-addr]
+  return &y;
+         ^
+gcc -o attack attack.o daem_acc.o texp.o -L../lib -lpraktikum  -m32 
+22:19:42 **** Incremental Build of configuration Default for project timing ****
+make all 
+gcc -g  -I../include -Wall -Wstrict-prototypes -Wpointer-arith -Wcast-qual -Wwrite-strings -Waggregate-return -Wstrict-prototypes -Wnested-externs -Winline  -DPRAKTIKUM -DSVR4  -m32   -c -o attack.o attack.c
+attack.c: In function ‘timingAttack’:
+attack.c:94:9: warning: function returns address of local variable [-Wreturn-local-addr]
+  return &y;
+         ^
+gcc -o attack attack.o daem_acc.o texp.o -L../lib -lpraktikum  -m32 
+22:20:45 **** Incremental Build of configuration Default for project timing ****
+make all 
+gcc -g  -I../include -Wall -Wstrict-prototypes -Wpointer-arith -Wcast-qual -Wwrite-strings -Waggregate-return -Wstrict-prototypes -Wnested-externs -Winline  -DPRAKTIKUM -DSVR4  -m32   -c -o attack.o attack.c
+attack.c: In function ‘main’:
+attack.c:38:2: error: too many arguments to function ‘timingAttack’
+  timingAttack(&y_trial, &n);
+  ^
+attack.c:31:13: note: declared here
+ longnum_ptr timingAttack(longnum_ptr n);
+             ^
+attack.c: At top level:
+attack.c:50:6: error: conflicting types for ‘timingAttack’
+ void timingAttack(longnum_ptr y, longnum_ptr n) {
+      ^
+attack.c:31:13: note: previous declaration of ‘timingAttack’ was here
+ longnum_ptr timingAttack(longnum_ptr n);
+             ^
+attack.c: In function ‘timingAttack’:
+attack.c:53:14: warning: passing argument 1 of ‘LInitNumber’ from incompatible pointer type [-Wincompatible-pointer-types]
+  LInitNumber(&y, EXPBITS, 0);
+              ^
+In file included from attack.c:14:0:
+../include/longint.h:176:6: note: expected ‘longnum_ptr {aka struct _longnum_ *}’ but argument is of type ‘struct _longnum_ **’
+<builtin>: recipe for target 'attack.o' failed
+ int  LInitNumber       ( longnum_ptr x, int nbits, int flags );
+      ^
+attack.c:90:11: warning: passing argument 1 of ‘LSetBit’ from incompatible pointer type [-Wincompatible-pointer-types]
+   LSetBit(&y, EXPBITS - i - 1, cur_bit);
+           ^
+In file included from attack.c:14:0:
+../include/longint.h:218:6: note: expected ‘longnum_ptr {aka struct _longnum_ *}’ but argument is of type ‘struct _longnum_ **’
+ void LSetBit           ( longnum_ptr x, int pos, int value );
+      ^
+attack.c:91:2: error: expected declaration or statement at end of input
+  }
+  ^
+make: *** [attack.o] Error 1
+22:21:12 **** Incremental Build of configuration Default for project timing ****
+make all 
+gcc -g  -I../include -Wall -Wstrict-prototypes -Wpointer-arith -Wcast-qual -Wwrite-strings -Waggregate-return -Wstrict-prototypes -Wnested-externs -Winline  -DPRAKTIKUM -DSVR4  -m32   -c -o attack.o attack.c
+attack.c:50:6: error: conflicting types for ‘timingAttack’
+ void timingAttack(longnum_ptr y, longnum_ptr n) {
+      ^
+attack.c:31:13: note: previous declaration of ‘timingAttack’ was here
+ longnum_ptr timingAttack(longnum_ptr y, longnum_ptr n);
+             ^
+attack.c: In function ‘timingAttack’:
+attack.c:53:14: warning: passing argument 1 of ‘LInitNumber’ from incompatible pointer type [-Wincompatible-pointer-types]
+  LInitNumber(&y, EXPBITS, 0);
+              ^
+In file included from attack.c:14:0:
+../include/longint.h:176:6: note: expected ‘longnum_ptr {aka struct _longnum_ *}’ but argument is of type ‘struct _longnum_ **’
+ int  LInitNumber       ( longnum_ptr x, int nbits, int flags );
+      ^
+attack.c:90:11: warning: passing argument 1 of ‘LSetBit’ from incompatible pointer type [-Wincompatible-pointer-types]
+   LSetBit(&y, EXPBITS - i - 1, cur_bit);
+           ^
+In file included from attack.c:14:0:
+../include/longint.h:218:6: note: expected ‘longnum_ptr {aka struct _longnum_ *}’ but argument is of type ‘struct _longnum_ **’
+<builtin>: recipe for target 'attack.o' failed
+ void LSetBit           ( longnum_ptr x, int pos, int value );
+      ^
+attack.c:91:2: error: expected declaration or statement at end of input
+  }
+  ^
+make: *** [attack.o] Error 1
+22:21:22 **** Incremental Build of configuration Default for project timing ****
+make all 
+gcc -g  -I../include -Wall -Wstrict-prototypes -Wpointer-arith -Wcast-qual -Wwrite-strings -Waggregate-return -Wstrict-prototypes -Wnested-externs -Winline  -DPRAKTIKUM -DSVR4  -m32   -c -o attack.o attack.c
+attack.c: In function ‘timingAttack’:
+attack.c:53:14: warning: passing argument 1 of ‘LInitNumber’ from incompatible pointer type [-Wincompatible-pointer-types]
+  LInitNumber(&y, EXPBITS, 0);
+              ^
+In file included from attack.c:14:0:
+../include/longint.h:176:6: note: expected ‘longnum_ptr {aka struct _longnum_ *}’ but argument is of type ‘struct _longnum_ **’
+ int  LInitNumber       ( longnum_ptr x, int nbits, int flags );
+      ^
+attack.c:90:11: warning: passing argument 1 of ‘LSetBit’ from incompatible pointer type [-Wincompatible-pointer-types]
+   LSetBit(&y, EXPBITS - i - 1, cur_bit);
+           ^
+In file included from attack.c:14:0:
+../include/longint.h:218:6: note: expected ‘longnum_ptr {aka struct _longnum_ *}’ but argument is of type ‘struct _longnum_ **’
+ void LSetBit           ( longnum_ptr x, int pos, int value );
+      ^
+attack.c:91:2: error: expected declaration or statement at end of input
+  }
+  ^
+<builtin>: recipe for target 'attack.o' failed
+make: *** [attack.o] Error 1
+22:21:31 **** Incremental Build of configuration Default for project timing ****
+make all 
+gcc -g  -I../include -Wall -Wstrict-prototypes -Wpointer-arith -Wcast-qual -Wwrite-strings -Waggregate-return -Wstrict-prototypes -Wnested-externs -Winline  -DPRAKTIKUM -DSVR4  -m32   -c -o attack.o attack.c
+attack.c: In function ‘timingAttack’:
+attack.c:53:14: warning: passing argument 1 of ‘LInitNumber’ from incompatible pointer type [-Wincompatible-pointer-types]
+  LInitNumber(&y, EXPBITS, 0);
+              ^
+In file included from attack.c:14:0:
+../include/longint.h:176:6: note: expected ‘longnum_ptr {aka struct _longnum_ *}’ but argument is of type ‘struct _longnum_ **’
+ int  LInitNumber       ( longnum_ptr x, int nbits, int flags );
+      ^
+attack.c:90:11: warning: passing argument 1 of ‘LSetBit’ from incompatible pointer type [-Wincompatible-pointer-types]
+   LSetBit(&y, EXPBITS - i - 1, cur_bit);
+           ^
+In file included from attack.c:14:0:
+../include/longint.h:218:6: note: expected ‘longnum_ptr {aka struct _longnum_ *}’ but argument is of type ‘struct _longnum_ **’
+ void LSetBit           ( longnum_ptr x, int pos, int value );
+      ^
+gcc -o attack attack.o daem_acc.o texp.o -L../lib -lpraktikum  -m32 
+22:22:07 **** Incremental Build of configuration Default for project timing ****
+make all 
+gcc -g  -I../include -Wall -Wstrict-prototypes -Wpointer-arith -Wcast-qual -Wwrite-strings -Waggregate-return -Wstrict-prototypes -Wnested-externs -Winline  -DPRAKTIKUM -DSVR4  -m32   -c -o attack.o attack.c
+attack.c: In function ‘timingAttack’:
+attack.c:53:14: warning: passing argument 1 of ‘LInitNumber’ from incompatible pointer type [-Wincompatible-pointer-types]
+  LInitNumber(&y, EXPBITS, 0);
+              ^
+In file included from attack.c:14:0:
+../include/longint.h:176:6: note: expected ‘longnum_ptr {aka struct _longnum_ *}’ but argument is of type ‘struct _longnum_ **’
+ int  LInitNumber       ( longnum_ptr x, int nbits, int flags );
+      ^
+gcc -o attack attack.o daem_acc.o texp.o -L../lib -lpraktikum  -m32 
+22:22:25 **** Incremental Build of configuration Default for project timing ****
+make all 
+gcc -g  -I../include -Wall -Wstrict-prototypes -Wpointer-arith -Wcast-qual -Wwrite-strings -Waggregate-return -Wstrict-prototypes -Wnested-externs -Winline  -DPRAKTIKUM -DSVR4  -m32   -c -o attack.o attack.c
+gcc -o attack attack.o daem_acc.o texp.o -L../lib -lpraktikum  -m32 
+22:22:44 **** Incremental Build of configuration Default for project timing ****
+make all 
+gcc -g  -I../include -Wall -Wstrict-prototypes -Wpointer-arith -Wcast-qual -Wwrite-strings -Waggregate-return -Wstrict-prototypes -Wnested-externs -Winline  -DPRAKTIKUM -DSVR4  -m32   -c -o attack.o attack.c
+gcc -o attack attack.o daem_acc.o texp.o -L../lib -lpraktikum  -m32 
+22:22:53 **** Incremental Build of configuration Default for project timing ****
+make all 
+make: Nothing to be done for 'all'.
+22:22:55 **** Incremental Build of configuration Default for project timing ****
+make all 
+make: Nothing to be done for 'all'.
+22:22:57 **** Incremental Build of configuration Default for project timing ****
+make all 
+make: Nothing to be done for 'all'.
+22:23:02 **** Incremental Build of configuration Default for project timing ****
+make all 
+make: Nothing to be done for 'all'.
+22:23:41 **** Incremental Build of configuration Default for project timing ****
+make all 
+make: Nothing to be done for 'all'.
+22:23:43 **** Incremental Build of configuration Default for project timing ****
+make all 
+make: Nothing to be done for 'all'.
+22:23:45 **** Incremental Build of configuration Default for project timing ****
+make all 
+make: Nothing to be done for 'all'.
+22:23:46 **** Incremental Build of configuration Default for project timing ****
+make all 
+make: Nothing to be done for 'all'.
+22:23:48 **** Incremental Build of configuration Default for project timing ****
+make all 
+make: Nothing to be done for 'all'.
+22:23:50 **** Incremental Build of configuration Default for project timing ****
+make all 
+make: Nothing to be done for 'all'.
+22:23:52 **** Incremental Build of configuration Default for project timing ****
+make all 
+make: Nothing to be done for 'all'.
+22:23:53 **** Incremental Build of configuration Default for project timing ****
+make all 
+make: Nothing to be done for 'all'.
+22:23:55 **** Incremental Build of configuration Default for project timing ****
+make all 
+make: Nothing to be done for 'all'.
+22:23:56 **** Incremental Build of configuration Default for project timing ****
+make all 
+make: Nothing to be done for 'all'.
+23:51:22 **** Incremental Build of configuration Default for project timing ****
+make all 
+gcc -g  -I../include -Wall -Wstrict-prototypes -Wpointer-arith -Wcast-qual -Wwrite-strings -Waggregate-return -Wstrict-prototypes -Wnested-externs -Winline  -DPRAKTIKUM -DSVR4  -m32   -c -o attack.o attack.c
+gcc -o attack attack.o daem_acc.o texp.o -L../lib -lpraktikum  -m32 
+23:51:37 **** Incremental Build of configuration Default for project timing ****
+make all 
+make: Nothing to be done for 'all'.
+23:51:40 **** Incremental Build of configuration Default for project timing ****
+make all 
+make: Nothing to be done for 'all'.
+23:51:41 **** Incremental Build of configuration Default for project timing ****
+make all 
+make: Nothing to be done for 'all'.
+23:51:42 **** Incremental Build of configuration Default for project timing ****
+make all 
+make: Nothing to be done for 'all'.
+23:51:45 **** Incremental Build of configuration Default for project timing ****
+make all 
+make: Nothing to be done for 'all'.
+23:51:53 **** Incremental Build of configuration Default for project timing ****
+make all 
+make: Nothing to be done for 'all'.
+23:54:14 **** Incremental Build of configuration Default for project timing ****
+make all 
+gcc -g  -I../include -Wall -Wstrict-prototypes -Wpointer-arith -Wcast-qual -Wwrite-strings -Waggregate-return -Wstrict-prototypes -Wnested-externs -Winline  -DPRAKTIKUM -DSVR4  -m32   -c -o attack.o attack.c
+gcc -o attack attack.o daem_acc.o texp.o -L../lib -lpraktikum  -m32 
+23:54:44 **** Incremental Build of configuration Default for project timing ****
+make all 
+make: Nothing to be done for 'all'.
+23:56:01 **** Incremental Build of configuration Default for project timing ****
+make all 
+gcc -g  -I../include -Wall -Wstrict-prototypes -Wpointer-arith -Wcast-qual -Wwrite-strings -Waggregate-return -Wstrict-prototypes -Wnested-externs -Winline  -DPRAKTIKUM -DSVR4  -m32   -c -o attack.o attack.c
+gcc -o attack attack.o daem_acc.o texp.o -L../lib -lpraktikum  -m32 
+23:56:12 **** Incremental Build of configuration Default for project timing ****
+make all 
+make: Nothing to be done for 'all'.
+23:56:35 **** Incremental Build of configuration Default for project timing ****
+make all 
+make: Nothing to be done for 'all'.
+23:59:54 **** Incremental Build of configuration Default for project timing ****
+make all 
+make: Nothing to be done for 'all'.
+23:59:58 **** Incremental Build of configuration Default for project timing ****
+make all 
+make: Nothing to be done for 'all'.
+00:01:40 **** Incremental Build of configuration Default for project timing ****
+make all 
+make: Nothing to be done for 'all'.
+00:02:18 **** Incremental Build of configuration Default for project timing ****
+make all 
+make: Nothing to be done for 'all'.
+00:10:10 **** Incremental Build of configuration Default for project timing ****
+make all 
+gcc -g  -I../include -Wall -Wstrict-prototypes -Wpointer-arith -Wcast-qual -Wwrite-strings -Waggregate-return -Wstrict-prototypes -Wnested-externs -Winline  -DPRAKTIKUM -DSVR4  -m32   -c -o attack.o attack.c
+attack.c: In function ‘main’:
+attack.c:56:9: warning: format ‘%d’ expects argument of type ‘int’, but argument 2 has type ‘long unsigned int’ [-Wformat=]
+  printf("w=%d\n", w);
+         ^
+gcc -o attack attack.o daem_acc.o texp.o -L../lib -lpraktikum  -m32 
+01:47:28 **** Incremental Build of configuration Default for project timing ****
+make all 
+gcc -g  -I../include -Wall -Wstrict-prototypes -Wpointer-arith -Wcast-qual -Wwrite-strings -Waggregate-return -Wstrict-prototypes -Wnested-externs -Winline  -DPRAKTIKUM -DSVR4  -m32   -c -o attack.o attack.c
+attack.c: In function ‘initProbes’:
+attack.c:64:17: warning: implicit declaration of function ‘LITTimeModeSquare’ [-Wimplicit-function-declaration]
+     - EXPBITS * LITTimeModeSquare(x + i, n);
+                 ^
+attack.c:64:5: warning: nested extern declaration of ‘LITTimeModeSquare’ [-Wnested-externs]
+     - EXPBITS * LITTimeModeSquare(x + i, n);
+     ^
+attack.c: In function ‘timingAttack’:
+attack.c:94:6: error: invalid operands to binary - (have ‘long unsigned int’ and ‘long unsigned int *’)
+      - (time_multi_z_x
+      ^
+attack.c:106:14: error: incompatible type for argument 1 of ‘LModMult’
+     LModMult(probe_z[j], probe_x[j], probe_z[j], n);
+              ^
+In file included from attack.c:14:0:
+../include/longint.h:205:6: note: expected ‘const_longnum_ptr {aka const struct _longnum_ *}’ but argument is of type ‘longnum {aka struct _longnum_}’
+ void LModMult          ( const_longnum_ptr x, const_longnum_ptr y, longnum_ptr z, 
+      ^
+attack.c:106:26: error: incompatible type for argument 2 of ‘LModMult’
+     LModMult(probe_z[j], probe_x[j], probe_z[j], n);
+                          ^
+In file included from attack.c:14:0:
+../include/longint.h:205:6: note: expected ‘const_longnum_ptr {aka const struct _longnum_ *}’ but argument is of type ‘longnum {aka struct _longnum_}’
+ void LModMult          ( const_longnum_ptr x, const_longnum_ptr y, longnum_ptr z, 
+      ^
+attack.c:106:38: error: incompatible type for argument 3 of ‘LModMult’
+     LModMult(probe_z[j], probe_x[j], probe_z[j], n);
+                                      ^
+In file included from attack.c:14:0:
+../include/longint.h:205:6: note: expected ‘longnum_ptr {aka struct _longnum_ *}’ but argument is of type ‘longnum {aka struct _longnum_}’
+ void LModMult          ( const_longnum_ptr x, const_longnum_ptr y, longnum_ptr z, 
+      ^
+attack.c:112:15: error: incompatible type for argument 1 of ‘LModSquare’
+    LModSquare(probe_x[j], probe_x[j], n);
+               ^
+In file included from attack.c:14:0:
+../include/longint.h:212:6: note: expected ‘const_longnum_ptr {aka const struct _longnum_ *}’ but argument is of type ‘longnum {aka struct _longnum_}’
+ void LModSquare        ( const_longnum_ptr a, longnum_ptr x, const_longnum_ptr n );
+      ^
+attack.c:112:27: error: incompatible type for argument 2 of ‘LModSquare’
+    LModSquare(probe_x[j], probe_x[j], n);
+                           ^
+In file included from attack.c:14:0:
+<builtin>: recipe for target 'attack.o' failed
+../include/longint.h:212:6: note: expected ‘longnum_ptr {aka struct _longnum_ *}’ but argument is of type ‘longnum {aka struct _longnum_}’
+ void LModSquare        ( const_longnum_ptr a, longnum_ptr x, const_longnum_ptr n );
+      ^
+make: *** [attack.o] Error 1
+01:48:02 **** Incremental Build of configuration Default for project timing ****
+make all 
+gcc -g  -I../include -Wall -Wstrict-prototypes -Wpointer-arith -Wcast-qual -Wwrite-strings -Waggregate-return -Wstrict-prototypes -Wnested-externs -Winline  -DPRAKTIKUM -DSVR4  -m32   -c -o attack.o attack.c
+attack.c: In function ‘initProbes’:
+attack.c:64:17: warning: implicit declaration of function ‘LITTimeModeSquare’ [-Wimplicit-function-declaration]
+     - EXPBITS * LITTimeModeSquare(x + i, n);
+                 ^
+attack.c:64:5: warning: nested extern declaration of ‘LITTimeModeSquare’ [-Wnested-externs]
+     - EXPBITS * LITTimeModeSquare(x + i, n);
+     ^
+attack.c: In function ‘timingAttack’:
+attack.c:106:40: error: incompatible type for argument 3 of ‘LModMult’
+     LModMult(&probe_z[j], &probe_x[j], probe_z[j], n);
+                                        ^
+In file included from attack.c:14:0:
+<builtin>: recipe for target 'attack.o' failed
+../include/longint.h:205:6: note: expected ‘longnum_ptr {aka struct _longnum_ *}’ but argument is of type ‘longnum {aka struct _longnum_}’
+ void LModMult          ( const_longnum_ptr x, const_longnum_ptr y, longnum_ptr z, 
+      ^
+make: *** [attack.o] Error 1
+01:48:09 **** Incremental Build of configuration Default for project timing ****
+make all 
+gcc -g  -I../include -Wall -Wstrict-prototypes -Wpointer-arith -Wcast-qual -Wwrite-strings -Waggregate-return -Wstrict-prototypes -Wnested-externs -Winline  -DPRAKTIKUM -DSVR4  -m32   -c -o attack.o attack.c
+attack.c: In function ‘initProbes’:
+attack.c:64:17: warning: implicit declaration of function ‘LITTimeModeSquare’ [-Wimplicit-function-declaration]
+     - EXPBITS * LITTimeModeSquare(x + i, n);
+                 ^
+attack.c:64:5: warning: nested extern declaration of ‘LITTimeModeSquare’ [-Wnested-externs]
+     - EXPBITS * LITTimeModeSquare(x + i, n);
+     ^
+gcc -o attack attack.o daem_acc.o texp.o -L../lib -lpraktikum  -m32 
+attack.o: In function `initProbes':
+/home/mima/prakII/timing//attack.c:64: undefined reference to `LITTimeModeSquare'
+collect2: error: ld returned 1 exit status
+Makefile:13: recipe for target 'attack' failed
+make: *** [attack] Error 1
+01:48:45 **** Incremental Build of configuration Default for project timing ****
+make all 
+gcc -g  -I../include -Wall -Wstrict-prototypes -Wpointer-arith -Wcast-qual -Wwrite-strings -Waggregate-return -Wstrict-prototypes -Wnested-externs -Winline  -DPRAKTIKUM -DSVR4  -m32   -c -o attack.o attack.c
+gcc -o attack attack.o daem_acc.o texp.o -L../lib -lpraktikum  -m32 
+01:49:20 **** Incremental Build of configuration Default for project timing ****
+make all 
+make: Nothing to be done for 'all'.
+01:52:14 **** Incremental Build of configuration Default for project timing ****
+make all 
+gcc -g  -I../include -Wall -Wstrict-prototypes -Wpointer-arith -Wcast-qual -Wwrite-strings -Waggregate-return -Wstrict-prototypes -Wnested-externs -Winline  -DPRAKTIKUM -DSVR4  -m32   -c -o attack.o attack.c
+gcc -o attack attack.o daem_acc.o texp.o -L../lib -lpraktikum  -m32 
+01:52:46 **** Incremental Build of configuration Default for project timing ****
+make all 
+gcc -g  -I../include -Wall -Wstrict-prototypes -Wpointer-arith -Wcast-qual -Wwrite-strings -Waggregate-return -Wstrict-prototypes -Wnested-externs -Winline  -DPRAKTIKUM -DSVR4  -m32   -c -o attack.o attack.c
+gcc -o attack attack.o daem_acc.o texp.o -L../lib -lpraktikum  -m32 
+01:53:18 **** Incremental Build of configuration Default for project timing ****
+make all 
+gcc -g  -I../include -Wall -Wstrict-prototypes -Wpointer-arith -Wcast-qual -Wwrite-strings -Waggregate-return -Wstrict-prototypes -Wnested-externs -Winline  -DPRAKTIKUM -DSVR4  -m32   -c -o attack.o attack.c
+gcc -o attack attack.o daem_acc.o texp.o -L../lib -lpraktikum  -m32 
+01:57:38 **** Incremental Build of configuration Default for project timing ****
+make all 
+gcc -g  -I../include -Wall -Wstrict-prototypes -Wpointer-arith -Wcast-qual -Wwrite-strings -Waggregate-return -Wstrict-prototypes -Wnested-externs -Winline  -DPRAKTIKUM -DSVR4  -m32   -c -o attack.o attack.c
+gcc -o attack attack.o daem_acc.o texp.o -L../lib -lpraktikum  -m32 
+01:59:16 **** Incremental Build of configuration Default for project timing ****
+make all 
+gcc -g  -I../include -Wall -Wstrict-prototypes -Wpointer-arith -Wcast-qual -Wwrite-strings -Waggregate-return -Wstrict-prototypes -Wnested-externs -Winline  -DPRAKTIKUM -DSVR4  -m32   -c -o attack.o attack.c
+gcc -o attack attack.o daem_acc.o texp.o -L../lib -lpraktikum  -m32 
+02:03:41 **** Incremental Build of configuration Default for project timing ****
+make all 
+gcc -g  -I../include -Wall -Wstrict-prototypes -Wpointer-arith -Wcast-qual -Wwrite-strings -Waggregate-return -Wstrict-prototypes -Wnested-externs -Winline  -DPRAKTIKUM -DSVR4  -m32   -c -o attack.o attack.c
+gcc -o attack attack.o daem_acc.o texp.o -L../lib -lpraktikum  -m32 
+02:03:52 **** Incremental Build of configuration Default for project timing ****
+make all 
+gcc -g  -I../include -Wall -Wstrict-prototypes -Wpointer-arith -Wcast-qual -Wwrite-strings -Waggregate-return -Wstrict-prototypes -Wnested-externs -Winline  -DPRAKTIKUM -DSVR4  -m32   -c -o attack.o attack.c
+gcc -o attack attack.o daem_acc.o texp.o -L../lib -lpraktikum  -m32 
+02:06:06 **** Incremental Build of configuration Default for project timing ****
+make all 
+gcc -g  -I../include -Wall -Wstrict-prototypes -Wpointer-arith -Wcast-qual -Wwrite-strings -Waggregate-return -Wstrict-prototypes -Wnested-externs -Winline  -DPRAKTIKUM -DSVR4  -m32   -c -o attack.o attack.c
+gcc -o attack attack.o daem_acc.o texp.o -L../lib -lpraktikum  -m32 
+02:13:36 **** Incremental Build of configuration Default for project timing ****
+make all 
+gcc -g  -I../include -Wall -Wstrict-prototypes -Wpointer-arith -Wcast-qual -Wwrite-strings -Waggregate-return -Wstrict-prototypes -Wnested-externs -Winline  -DPRAKTIKUM -DSVR4  -m32   -c -o attack.o attack.c
+gcc -o attack attack.o daem_acc.o texp.o -L../lib -lpraktikum  -m32 
+02:16:59 **** Incremental Build of configuration Default for project timing ****
+make all 
+gcc -g  -I../include -Wall -Wstrict-prototypes -Wpointer-arith -Wcast-qual -Wwrite-strings -Waggregate-return -Wstrict-prototypes -Wnested-externs -Winline  -DPRAKTIKUM -DSVR4  -m32   -c -o attack.o attack.c
+attack.c: In function ‘initProbes’:
+attack.c:76:21: warning: implicit declaration of function ‘getIterationSquareTime’ [-Wimplicit-function-declaration]
+   unsigned long t = getIterationSquareTime(x + i, n);
+                     ^
+attack.c:76:3: warning: nested extern declaration of ‘getIterationSquareTime’ [-Wnested-externs]
+   unsigned long t = getIterationSquareTime(x + i, n);
+   ^
+gcc -o attack attack.o daem_acc.o texp.o -L../lib -lpraktikum  -m32 
+attack.o: In function `initProbes':
+/home/mima/prakII/timing//attack.c:76: undefined reference to `getIterationSquareTime'
+Makefile:13: recipe for target 'attack' failed
+collect2: error: ld returned 1 exit status
+make: *** [attack] Error 1
+02:17:09 **** Incremental Build of configuration Default for project timing ****
+make all 
+gcc -g  -I../include -Wall -Wstrict-prototypes -Wpointer-arith -Wcast-qual -Wwrite-strings -Waggregate-return -Wstrict-prototypes -Wnested-externs -Winline  -DPRAKTIKUM -DSVR4  -m32   -c -o attack.o attack.c
+gcc -o attack attack.o daem_acc.o texp.o -L../lib -lpraktikum  -m32 
+02:18:38 **** Incremental Build of configuration Default for project timing ****
+make all 
+gcc -g  -I../include -Wall -Wstrict-prototypes -Wpointer-arith -Wcast-qual -Wwrite-strings -Waggregate-return -Wstrict-prototypes -Wnested-externs -Winline  -DPRAKTIKUM -DSVR4  -m32   -c -o attack.o attack.c
+gcc -o attack attack.o daem_acc.o texp.o -L../lib -lpraktikum  -m32 
+02:18:56 **** Incremental Build of configuration Default for project timing ****
+make all 
+gcc -g  -I../include -Wall -Wstrict-prototypes -Wpointer-arith -Wcast-qual -Wwrite-strings -Waggregate-return -Wstrict-prototypes -Wnested-externs -Winline  -DPRAKTIKUM -DSVR4  -m32   -c -o attack.o attack.c
+gcc -o attack attack.o daem_acc.o texp.o -L../lib -lpraktikum  -m32 
+02:19:33 **** Incremental Build of configuration Default for project timing ****
+make all 
+gcc -g  -I../include -Wall -Wstrict-prototypes -Wpointer-arith -Wcast-qual -Wwrite-strings -Waggregate-return -Wstrict-prototypes -Wnested-externs -Winline  -DPRAKTIKUM -DSVR4  -m32   -c -o attack.o attack.c
+gcc -o attack attack.o daem_acc.o texp.o -L../lib -lpraktikum  -m32 
+02:19:59 **** Incremental Build of configuration Default for project timing ****
+make all 
+gcc -g  -I../include -Wall -Wstrict-prototypes -Wpointer-arith -Wcast-qual -Wwrite-strings -Waggregate-return -Wstrict-prototypes -Wnested-externs -Winline  -DPRAKTIKUM -DSVR4  -m32   -c -o attack.o attack.c
+gcc -o attack attack.o daem_acc.o texp.o -L../lib -lpraktikum  -m32 
+02:20:55 **** Incremental Build of configuration Default for project timing ****
+make all 
+gcc -g  -I../include -Wall -Wstrict-prototypes -Wpointer-arith -Wcast-qual -Wwrite-strings -Waggregate-return -Wstrict-prototypes -Wnested-externs -Winline  -DPRAKTIKUM -DSVR4  -m32   -c -o attack.o attack.c
+gcc -o attack attack.o daem_acc.o texp.o -L../lib -lpraktikum  -m32 
+02:25:22 **** Incremental Build of configuration Default for project timing ****
+make all 
+gcc -g  -I../include -Wall -Wstrict-prototypes -Wpointer-arith -Wcast-qual -Wwrite-strings -Waggregate-return -Wstrict-prototypes -Wnested-externs -Winline  -DPRAKTIKUM -DSVR4  -m32   -c -o attack.o attack.c
+gcc -o attack attack.o daem_acc.o texp.o -L../lib -lpraktikum  -m32 

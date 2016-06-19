@@ -1,0 +1,92 @@
+/*************************************************************
+ **         Europäisches Institut für Systemsicherheit        *
+ **   Proktikum "Kryptoanalyse"                               *
+ **                                                           *
+ ** Versuch 4: Kocher-Timing-Attack                           *
+ **                                                           *
+ **************************************************************
+ **
+ ** attack.c: Timing-Attacke Rahmenprogramm
+ **/
+#include <stdio.h>
+#include <time.h>
+
+#include "longint.h"
+#include "texp.h"
+
+#include "daemon.h"
+
+#define nbits 128 /* die Rechenlaenge */
+
+#define EXPBITS 128 /* Anzahl der Bits im Exponent */
+
+longnum n; /* Modulus */
+longnum y_trial; /* Hier soll der geheime Exponent y berechnet werden */
+longnum y_ok; /* Tatsaechlicher geheimer Exponent (vom Daemon) */
+int ok; /* war der Exponent richtig? */
+
+const unsigned long expected_timing = (1 << 18);
+/* Erwartungswert fuer den Zeitaufwand einer Multiplikation */
+
+void timingAttack(longnum_ptr y, longnum_ptr n);
+
+int main(void) {
+	connect_daemon(&n); /* Mit dem Daemonen verbinden und den Modulus
+	 * abholen */
+
+	/* XXX Aufgabe: mit exp_daemon () Samples generieren und y_trial berechnen */
+	timingAttack(&y_trial, &n);
+
+	printf("Berechneter Exponent: %s\n", LLong2Hex(&y_trial, 0, 1, 1));
+	ok = key_daemon(&y_ok, &y_trial);
+	printf("Das war %s\n", ok ? "richtig" : "falsch");
+	if (!ok) {
+		printf("Richtig war: %s\n", LLong2Hex(&y_ok, 0, 1, 1));
+	}
+	disc_daemon(); /* Verbindung zum Daemon beenden */
+	exit(0);
+}
+
+void timingAttack(longnum_ptr y, longnum_ptr n) {
+	longnum x, z;
+	LInitNumber(&x, nbits, 0);
+	LInitNumber(&y, EXPBITS, 0);
+	LInitNumber(&z, nbits, 0);
+	unsigned long total_timing = exp_daemon(&z, &x);
+
+	longnum eins, temp;
+	LInitNumber(&eins, nbits, 0);
+	LInt2Long(1, &eins);
+	LInitNumber(&temp, nbits, 0);
+	unsigned long timing_base_eins = exp_daemon(&temp, &eins);
+	unsigned long time_exp_base_eins = LITTimeModSquare(&eins, n);
+	unsigned long time_mul_eins = LITTimeModMult(&eins, &eins, n);
+	int hammingsGewicht = (int) (((timing_base_eins
+			- EXPBITS * time_exp_base_eins) / time_mul_eins) + 0.5);
+
+	unsigned long time_multi_z_x = LITTimeModMult(&eins, &x, n);
+	unsigned long t1, t0;
+	int cur_bit = 0;
+
+	longnum cal_z;
+	LInitNumber(&cal_z, nbits, 0);
+	LInt2Long(1, &cal_z);
+	for (int i = 0; i < EXPBITS; i++) {
+		time_multi_z_x = LITTimeModMult(&cal_z, &x, n);
+		t1 = total_timing
+				- (time_multi_z_x
+						+ (hammingsGewicht - 1) * expected_timing
+								* time_multi_z_x);
+		t0 = total_timing
+				- (hammingsGewicht * expected_timing * time_multi_z_x);
+		if (t1 < t0)
+			cur_bit = 1;
+		else
+			cur_bit = 0;
+		if (cur_bit == 1)
+			hammingsGewicht--;
+		LModSquare(&x, &temp, n);
+		LCpy(&x, &temp);
+		LSetBit(&y, EXPBITS - i - 1, cur_bit);
+	}
+}
