@@ -1,7 +1,0 @@
-02:25:22 **** Incremental Build of configuration Default for project timing ****
-make all 
-gcc -g  -I../include -Wall -Wstrict-prototypes -Wpointer-arith -Wcast-qual -Wwrite-strings -Waggregate-return -Wstrict-prototypes -Wnested-externs -Winline  -DPRAKTIKUM -DSVR4  -m32   -c -o attack.o attack.c
-gcc -o attack attack.o daem_acc.o texp.o -L../lib -lpraktikum  -m32 
-
-02:25:22 Build Finished (took 257ms)
-
