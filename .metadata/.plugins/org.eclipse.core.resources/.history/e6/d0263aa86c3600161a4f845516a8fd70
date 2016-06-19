@@ -70,7 +70,7 @@
 #define GET_BIT(a,b,c) (((a)[b]>>(c))&1)
 /* holt das c-te Bit in Element b des Arrays a */
 
-//					|-------------------|
+// Hash funktion:	|-------------------|
 //					|-------------------|
 //						XOR
 //				|-------------------|
