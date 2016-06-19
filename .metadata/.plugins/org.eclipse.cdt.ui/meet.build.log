@@ -1,6 +1,0 @@
-00:25:54 **** Clean-only build of configuration Default for project meet ****
-make clean 
-rm -f *.o ssc attack core
-
-00:25:54 Build Finished (took 111ms)
-
